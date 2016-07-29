@@ -1,0 +1,52 @@
+﻿@using HRPortal.Models
+@model HRPortal.Models.JobVM
+@{
+    ViewBag.Title = "ChangeApplicationStatus";
+}
+
+<div class="row">
+    <div class="col-xs-12">
+        <h2>Change Application Status</h2>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <h3>Company: @Model.company.Name</h3>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <h3>Title: @Model.job.Title</h3>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <h4>Name: @Model.app.FirstName @Model.app.LastName</h4>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <h4>Resume: @Model.app.Resume</h4>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+
+        @using (Html.BeginForm("ChangeApplicationStatus", "Company", FormMethod.Post))
+        {
+            @Html.HiddenFor(a => a.company.CompanyId)
+            @Html.HiddenFor(a => a.app.ApplicationId)
+            @Html.HiddenFor(a => a.job.JobId)
+            @Html.HiddenFor(a => a.app.FirstName)
+            @Html.HiddenFor(a => a.app.LastName)
+            @Html.HiddenFor(a => a.app.Resume)
+            <div class="form-group">
+                <label>Status:</label>
+                @Html.DropDownListFor(a => a.app.Status, Model.Statuses, "-Choose One-", new { @class = "form-control" })
+            </div>
+            <button class="btn btn-primary">Submit</button>
+        }
+
+    </div>
+</div>
+

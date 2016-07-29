@@ -1,0 +1,25 @@
+﻿@model IEnumerable<HRPortal.Models.Company>
+@{
+    ViewBag.Title = "SeeCompanies";
+}
+
+<h2>Companies</h2>
+<div class="row">
+    <table class="table table-striped">
+        <thead>
+        <th>Company</th>
+        <th></th>
+        </thead>
+        <tbody>
+            @foreach (var company in Model)
+            {
+                <tr>
+                    <td>@company.Name</td>
+                    <td>@Html.ActionLink("See Job Openings", "SeeJobsByCompany", "Applicants", new { id = company.CompanyId }, null)</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+@Html.ActionLink("\nReturn to Home", "Index", "Home")
+

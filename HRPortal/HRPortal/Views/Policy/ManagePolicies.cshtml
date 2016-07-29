@@ -1,0 +1,43 @@
+﻿@model HRPortal.Models.PolicyCategoryVM
+@{
+    ViewBag.Title = "ManagePolicies";
+}
+
+<h2>Manage Policies</h2>
+<div class="row">
+    <h3>Select the Policy Category you wish to review:</h3>
+</div>
+<div class="row">
+    @Html.ActionLink("Manage Categories", "ManageCategories")
+    @Html.ActionLink("Add Policy", "Add", "Policy")
+    @Html.DropDownList("SelectedCategory", Model.Categories, "-Select Category-", new {id = "SelectedCategory"})
+</div>
+<div class="row">
+    @foreach (var policy in Model.Policies)
+    {
+        <div class="panel @policy.Category policyCategory" style="display: none;">
+            <div class="panel-heading">
+                @policy.Name
+                <button class="btn btn-sm showDetail">See Policy Details</button>
+                <button class="btn btn-sm hideDetail">Hide Policy Details</button>
+                @Html.ActionLink("Delete", "Delete", "Policy", new {policyId = policy.PolicyId}, new { @class = "btn btn-sm btn-danger" })
+            </div>
+            <!--Make view detail button, show onclick-->
+            <div class="panel-body policyDetail">
+                <p>In effect since: @policy.DateCreated</p>
+                <h5>Policy Details: </h5>
+
+                <p>@policy.Description</p>
+                <!--make hide button onclick-->
+            </div>
+        </div>
+
+    }
+</div>
+
+@section scripts
+{
+
+    <script src="~/scripts/App/ViewPolicies.js"></script>
+}
+

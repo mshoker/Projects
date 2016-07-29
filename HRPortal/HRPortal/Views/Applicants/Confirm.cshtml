@@ -1,0 +1,52 @@
+﻿@model HRPortal.Models.JobVM
+@{
+    ViewBag.Title = "Confirm";
+}
+
+<div class="row">
+    <div class="col-xs-12">
+        <h2>Your Application is Submitted:</h2>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <h3>Company: @Model.company.Name</h3>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <h3>Title: @Model.job.Title</h3>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <h4>Name: @Model.app.FirstName @Model.app.LastName</h4>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <h4>Phone: @Model.app.Phone</h4>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <h4>Email: @Model.app.Email</h4>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <h4>Preferred Days: @Model.app.PreferredDays.ToString()</h4>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <h4>Resume: @Model.app.Resume</h4>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        @Html.ActionLink("Return to Home", "Index", "Home")
+    </div>
+</div>
+
+

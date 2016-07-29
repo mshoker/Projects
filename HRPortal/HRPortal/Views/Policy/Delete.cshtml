@@ -1,0 +1,53 @@
+﻿@model HRPortal.Models.Policy
+@{
+    ViewBag.Title = "Delete";
+}
+<div call="row">
+    <div class="col-xs-12">
+        @using (Html.BeginForm())
+        {
+            @Html.HiddenFor(p => p.PolicyId)
+            <div class="row">
+                <div class="col-xs-12">
+                    <h2>Are you sure you want to delete this policy?</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <label>Policy</label>
+                    @Html.DisplayFor(p => p.Name)
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <label>Date of Creation</label>
+                    @Html.DisplayFor(p => p.DateCreated)
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <label>Category</label>
+                    @Html.DisplayFor(p => p.Category)
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <label>Policy Details</label>
+                    @Html.DisplayFor(p => p.Description)
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    @Html.ActionLink("Cancel", "ManagePolicies", "Policy", new { @class = "btn btn-sm btn-info" })
+                    <button type="submit" , class="btn btn-sm btn-danger">Delete</button>
+                    @*@Html.ActionLink("Delete", "ConfirmDelete", "Policy", new { policyId = Model.PolicyId }, new { @class = "btn btn-sm btn-danger" })*@
+
+
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+
+

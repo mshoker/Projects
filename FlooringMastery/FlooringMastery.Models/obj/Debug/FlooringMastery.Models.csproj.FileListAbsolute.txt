@@ -1,0 +1,5 @@
+C:\Users\Apprentice\Documents\BitBucket\mattea-azara-individial-work\Mastery\FlooringMastery\FlooringMastery.Models\bin\Debug\FlooringMastery.Models.dll
+C:\Users\Apprentice\Documents\BitBucket\mattea-azara-individial-work\Mastery\FlooringMastery\FlooringMastery.Models\bin\Debug\FlooringMastery.Models.pdb
+C:\Users\Apprentice\Documents\BitBucket\mattea-azara-individial-work\Mastery\FlooringMastery\FlooringMastery.Models\obj\Debug\FlooringMastery.Models.csprojResolveAssemblyReference.cache
+C:\Users\Apprentice\Documents\BitBucket\mattea-azara-individial-work\Mastery\FlooringMastery\FlooringMastery.Models\obj\Debug\FlooringMastery.Models.dll
+C:\Users\Apprentice\Documents\BitBucket\mattea-azara-individial-work\Mastery\FlooringMastery\FlooringMastery.Models\obj\Debug\FlooringMastery.Models.pdb

@@ -1,0 +1,25 @@
+﻿@model HRPortal.Models.Company 
+@{
+    ViewBag.Title = "ManageJobs";
+}
+
+<h2>@Model.Name</h2>
+@Html.ActionLink("Add Job Opening", "AddOpening", "Company", new {compId = Model.CompanyId}, new {@class="btn btn-primary"})
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Job</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var job in Model.Openings)
+        {
+            <tr>
+                <td>@job.Title</td>
+                <td>@Html.ActionLink("Delete", "DeleteOpening", "Company", new { compId = Model.CompanyId, jobId = job.JobId }, null)</td>
+            </tr>
+        }
+    </tbody>
+</table>
+

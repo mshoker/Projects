@@ -1,0 +1,20 @@
+﻿@model HRPortal.Models.JobVM
+@{
+    ViewBag.Title = "AddOpening";
+}
+
+<h2>@Model.company.Name - Add Job Opening</h2>
+
+<div class="row">
+    @using (Html.BeginForm())
+    {
+    @Html.HiddenFor(m => m.company.CompanyId)
+    <div class="row">
+        <label>Job Title: </label>
+        @Html.TextBoxFor(m => m.job.Title)
+    </div>
+    <div class="row">
+        <button>Add</button>
+    </div>
+    }
+</div>

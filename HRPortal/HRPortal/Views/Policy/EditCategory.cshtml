@@ -1,0 +1,26 @@
+﻿@model HRPortal.Models.NewCategoryVM
+@{
+    ViewBag.Title = "EditCategory";
+}
+
+
+<div class="row">
+    <div class="col-xs-12">
+        <h2>Edit @Model.Category</h2>
+        @Html.ActionLink("Return", "ManageCategories", "Policy")
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        @using (Html.BeginForm())
+        {
+            @Html.HiddenFor(c => c.Category)
+            <div class="form-group">
+                <label>Category: </label>
+                @Html.TextBoxFor(c => c.Origin, new {@class = "form-control", placeholder = @Model.Category})
+            </div>
+            <button type="submit" class="btn btn-sm btn-primary" >Save</button>
+        }
+    </div>
+</div>
+

@@ -1,0 +1,16 @@
+C:\Users\Apprentice\Documents\BitBucket\mattea-azara-individial-work\Mastery\FlooringMastery\FlooringMastery.Tests\bin\Debug\FlooringMastery.Tests.dll.config
+C:\Users\Apprentice\Documents\BitBucket\mattea-azara-individial-work\Mastery\FlooringMastery\FlooringMastery.Tests\bin\Debug\FlooringMastery.Tests.dll
+C:\Users\Apprentice\Documents\BitBucket\mattea-azara-individial-work\Mastery\FlooringMastery\FlooringMastery.Tests\bin\Debug\FlooringMastery.Tests.pdb
+C:\Users\Apprentice\Documents\BitBucket\mattea-azara-individial-work\Mastery\FlooringMastery\FlooringMastery.Tests\bin\Debug\FlooringMastery.BLL.dll
+C:\Users\Apprentice\Documents\BitBucket\mattea-azara-individial-work\Mastery\FlooringMastery\FlooringMastery.Tests\bin\Debug\FlooringMastery.Data.dll
+C:\Users\Apprentice\Documents\BitBucket\mattea-azara-individial-work\Mastery\FlooringMastery\FlooringMastery.Tests\bin\Debug\FlooringMastery.Models.dll
+C:\Users\Apprentice\Documents\BitBucket\mattea-azara-individial-work\Mastery\FlooringMastery\FlooringMastery.Tests\bin\Debug\nunit.framework.dll
+C:\Users\Apprentice\Documents\BitBucket\mattea-azara-individial-work\Mastery\FlooringMastery\FlooringMastery.Tests\bin\Debug\FlooringMastery.BLL.pdb
+C:\Users\Apprentice\Documents\BitBucket\mattea-azara-individial-work\Mastery\FlooringMastery\FlooringMastery.Tests\bin\Debug\FlooringMastery.Data.pdb
+C:\Users\Apprentice\Documents\BitBucket\mattea-azara-individial-work\Mastery\FlooringMastery\FlooringMastery.Tests\bin\Debug\FlooringMastery.Models.pdb
+C:\Users\Apprentice\Documents\BitBucket\mattea-azara-individial-work\Mastery\FlooringMastery\FlooringMastery.Tests\bin\Debug\nunit.framework.xml
+C:\Users\Apprentice\Documents\BitBucket\mattea-azara-individial-work\Mastery\FlooringMastery\FlooringMastery.Tests\obj\Debug\FlooringMastery.Tests.csprojResolveAssemblyReference.cache
+C:\Users\Apprentice\Documents\BitBucket\mattea-azara-individial-work\Mastery\FlooringMastery\FlooringMastery.Tests\obj\Debug\FlooringMastery.Tests.dll
+C:\Users\Apprentice\Documents\BitBucket\mattea-azara-individial-work\Mastery\FlooringMastery\FlooringMastery.Tests\obj\Debug\FlooringMastery.Tests.pdb
+C:\Users\Apprentice\Documents\BitBucket\mattea-azara-individial-work\Mastery\FlooringMastery\FlooringMastery.Tests\bin\Debug\FlooringMastery.UI.exe
+C:\Users\Apprentice\Documents\BitBucket\mattea-azara-individial-work\Mastery\FlooringMastery\FlooringMastery.Tests\bin\Debug\FlooringMastery.UI.pdb

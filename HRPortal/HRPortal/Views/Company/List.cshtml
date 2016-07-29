@@ -1,0 +1,25 @@
+﻿@model IEnumerable<HRPortal.Models.Company>
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>All Companies</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Company</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var company in Model)
+        {
+            <tr>
+                <td>@company.Name</td>
+                <td>@Html.ActionLink("See Applications", "ListApplications", "Company", new { compId = company.CompanyId }, null) | @Html.ActionLink("Manage Openings", "ManageJobs", "Company", new { compId = company.CompanyId }, null) | @Html.ActionLink("Employee Information", "EmployeeInfo", "Company", new { compId = company.CompanyId }, null)</td>
+            </tr>
+        }
+    </tbody>
+</table>
+@Html.ActionLink("Return to Home", "Index", "Home")
+

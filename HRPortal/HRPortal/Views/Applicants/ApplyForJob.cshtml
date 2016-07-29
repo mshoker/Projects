@@ -1,0 +1,75 @@
+﻿@using HRPortal.Models.Enums
+@model HRPortal.Models.JobVM
+@{
+    ViewBag.Title = "ApplyForJob";
+}
+<div class="row">
+    <div class="col-xs-12">
+        <h2>Apply For Job</h2>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <h3>Company: @Model.company.Name</h3>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <h3> Job: @Model.job.Title</h3>
+    </div>
+</div>
+
+@using (Html.BeginForm("ApplyForJob", "Applicants", null, FormMethod.Post, new {id="applicationForm"}))
+{
+    @Html.HiddenFor(a => a.company.CompanyId)
+    @Html.HiddenFor(a => a.job.JobId)
+    <div class="form-group">
+        <label>First Name</label>
+        @Html.TextBoxFor(a => a.app.FirstName, new { @class = "form-control" })
+        @Html.ValidationMessageFor(a=> a.app.FirstName)
+    </div>
+    <div class="form-group">
+        <label>Last Name</label>
+        @Html.TextBoxFor(a => a.app.LastName, new {@class = "form-control"})
+        @Html.ValidationMessageFor(a => a.app.LastName)
+    </div>
+    <div class="form-group">
+        <label>Email</label>
+        @Html.TextBoxFor(a => a.app.Email, new {@class = "form-control"})
+        @Html.ValidationMessageFor(a => a.app.Email)
+    </div>
+    <div class="form-group">
+        <label>Phone</label>
+        @Html.TextBoxFor(a => a.app.Phone, new { @class = "form-control" })
+        @Html.ValidationMessageFor(a => a.app.Phone)
+    </div>
+    <div id="daysOfWeek">
+        <label>What days are best to contact you?</label>
+        @foreach (var day in Enum.GetValues(typeof(DaysOfTheWeek)))
+        {
+            if (day.ToString() != "None")
+            {
+                <span>@Html.CheckBox(day.ToString(), new {value = (int) day, @class = "days"})
+        @day.ToString()</span>
+            }
+        }
+        @Html.HiddenFor(m => m.app.PreferredDays)
+    </div>
+    <div class="form-group">
+        <label>Resume</label>
+        @Html.TextAreaFor(a => a.app.Resume, new { @class = "form-control" })
+        @Html.ValidationMessageFor(a => a.app.Resume)
+    </div>
+
+    <button class="btn btn-primary">Submit</button>
+    @Html.ActionLink("Cancel", "Index", "Home")
+}
+
+@section scripts{
+    <script src="~/scripts/jquery.validate.min.js"></script>
+    <script src="~/scripts/additional-methods.min.js"></script>
+    <script src="~/scripts/jquery.validate.unobtrusive.js"></script>
+    <script src="~/scripts/App/ApplyForJob.js"></script>
+    <script src="~/scripts/App/jquery-validate-default.js"></script>
+    <script src="~/scripts/App/ApplicationValidation.js"></script>
+}

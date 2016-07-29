@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Applicants:</h2>
+<div class="row">
+    @Html.ActionLink("Search by Company", "SeeCompanies", "Applicants", null, new {@class="btn btn-lg btn-primary"})
+
+    @Html.ActionLink("Search by Job", "SeeJobs", "Applicants", null, new {@class="btn btn-lg btn-primary"})
+</div>
+<div class="row">
+    @Html.ActionLink("Return to Home", "Index", "Home")
+</div>
+

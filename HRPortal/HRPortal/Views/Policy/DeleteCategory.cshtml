@@ -1,0 +1,51 @@
+﻿@using HRPortal.Models
+@model HRPortal.Models.PolicyCategoryVM
+@{
+    ViewBag.Title = "DeleteCategory";
+}
+
+<h2>Are you sure that you want to delete the category @Model.Categories.First().Value?</h2>
+@using (Html.BeginForm("DeleteCategory", "Policy", "Delete", FormMethod.Post))
+{
+    <!--Used stack overflow to learn how to hide list data-->
+    //for (int i = 0; i < Model.Categories.Count; i++)
+    //{
+    //    Html.HiddenFor(m => m.Categories[i].Value);
+    //}
+    @Html.HiddenFor(m => m.Origin)
+   <div class="row">
+        @Html.ActionLink("Cancel", "ManageCategories", "Policy")
+        <button type="submit" , class="btn btn-sm btn-danger">Delete</button>
+        @*@Html.ActionLink("Delete", "DeleteCategory", "Policy", new { ncvm = new NewCategoryVM() {Category = Model.Categories.First().Value, Origin = Model.Categories.First().Value }} , new { @class = "btn btn-sm btn-danger" })*@
+      </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <h4>Policies</h4>
+            @foreach (var policy in Model.Policies)
+            {
+                <div class="panel @policy.Category policyCategory">
+                    <div class="panel-heading">
+                        @policy.Name
+                        <button class="btn btn-sm showDetail" id="seePolicy">See Policy Details</button>
+                        <button class="btn btn-sm hideDetail" id="unSeePolicy">Hide Policy Details</button>
+                    </div>
+                    <div class="panel-body policyDetail">
+                        <p>In effect since: @policy.DateCreated</p>
+                        <h5>Policy Details: </h5>
+                        <p>@policy.Description</p>
+                    </div>
+                </div>
+
+            }
+        </div>
+    </div>
+}
+@section scripts
+{
+
+    <script src="~/scripts/App/ViewPoliciesDelete.js"></script>
+}
+
+
+
+

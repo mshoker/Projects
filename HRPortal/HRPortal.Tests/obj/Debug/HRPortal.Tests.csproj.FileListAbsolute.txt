@@ -1,0 +1,5 @@
+C:\Users\Apprentice\Documents\BitBucket\mattea-azara-individial-work\Week7\HRPortal\HRPortal.Tests\bin\Debug\HRPortal.Tests.dll
+C:\Users\Apprentice\Documents\BitBucket\mattea-azara-individial-work\Week7\HRPortal\HRPortal.Tests\bin\Debug\HRPortal.Tests.pdb
+C:\Users\Apprentice\Documents\BitBucket\mattea-azara-individial-work\Week7\HRPortal\HRPortal.Tests\obj\Debug\HRPortal.Tests.csprojResolveAssemblyReference.cache
+C:\Users\Apprentice\Documents\BitBucket\mattea-azara-individial-work\Week7\HRPortal\HRPortal.Tests\obj\Debug\HRPortal.Tests.dll
+C:\Users\Apprentice\Documents\BitBucket\mattea-azara-individial-work\Week7\HRPortal\HRPortal.Tests\obj\Debug\HRPortal.Tests.pdb

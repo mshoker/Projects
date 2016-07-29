@@ -1,0 +1,45 @@
+﻿@model HRPortal.Models.Employee
+@{
+    ViewBag.Title = "WorkHistory";
+}
+
+<h2>Work History</h2>
+@Html.ActionLink("Back", "EmployeeInfo", "Company", new {compId = @Model.Employer.CompanyId}, null)
+<h4>Employee: @Model.FirstName @Model.LastName</h4>
+<h4>Title: @Model.Job.Title</h4>
+<h4>Hire Date: @Model.HireDate.ToShortDateString()</h4>
+<h4>Contact: @Model.Phone</h4>
+
+<div ng-app="employeeApp" ng-view id="@Model.Id">
+
+</div>
+
+@*@Html.ActionLink("Add New Entry", "AddTimeEntry", "Employee", new {compId = @Model.Employer.CompanyId, empId = Model.Id}, new {@class="btn btn-primary"})*@
+@*<div class="row">
+    <table class="table table-striped">
+        <thead>
+        <th>Day</th>
+        <th>Start Time</th>
+        <th>Finish Time</th>
+        <th>Total Hours Worked</th>
+        <th></th>
+        </thead>
+        <tbody>
+        @foreach (var day in @Model.WorkHistory)
+        {
+            <td>@day.Day.ToShortDateString()</td>
+            <td>@day.Day.ToShortTimeString()</td>
+            <td></td>
+            <td>@day.HoursWorked</td>
+            <td>@Html.ActionLink("Edit", "EditTimeEntry", "Employee") @Html.ActionLink("Delete", "DeleteTimeEntry", "Employee")</td>
+        }
+        
+        </tbody>
+    </table>
+</div>*@
+
+@section scripts{
+    <script src="~/scripts/App/TimeSheet.js"></script>
+}
+
+

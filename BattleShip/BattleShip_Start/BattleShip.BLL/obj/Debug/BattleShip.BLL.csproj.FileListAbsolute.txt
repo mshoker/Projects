@@ -1,0 +1,10 @@
+C:\Users\Apprentice\Documents\Battleship\BattleShip_Start\BattleShip.BLL\obj\Debug\BattleShip.BLL.csprojResolveAssemblyReference.cache
+C:\Users\Apprentice\Documents\Battleship\BattleShip_Start\BattleShip.BLL\bin\Debug\BattleShip.BLL.dll
+C:\Users\Apprentice\Documents\Battleship\BattleShip_Start\BattleShip.BLL\bin\Debug\BattleShip.BLL.pdb
+C:\Users\Apprentice\Documents\Battleship\BattleShip_Start\BattleShip.BLL\obj\Debug\BattleShip.BLL.dll
+C:\Users\Apprentice\Documents\Battleship\BattleShip_Start\BattleShip.BLL\obj\Debug\BattleShip.BLL.pdb
+C:\Users\Apprentice\Documents\BitBucket\mattea-azara-individial-work\Battleship\BattleShip_Start\BattleShip.BLL\bin\Debug\BattleShip.BLL.dll
+C:\Users\Apprentice\Documents\BitBucket\mattea-azara-individial-work\Battleship\BattleShip_Start\BattleShip.BLL\bin\Debug\BattleShip.BLL.pdb
+C:\Users\Apprentice\Documents\BitBucket\mattea-azara-individial-work\Battleship\BattleShip_Start\BattleShip.BLL\obj\Debug\BattleShip.BLL.csprojResolveAssemblyReference.cache
+C:\Users\Apprentice\Documents\BitBucket\mattea-azara-individial-work\Battleship\BattleShip_Start\BattleShip.BLL\obj\Debug\BattleShip.BLL.dll
+C:\Users\Apprentice\Documents\BitBucket\mattea-azara-individial-work\Battleship\BattleShip_Start\BattleShip.BLL\obj\Debug\BattleShip.BLL.pdb

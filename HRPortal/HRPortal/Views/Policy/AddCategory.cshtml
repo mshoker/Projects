@@ -1,0 +1,26 @@
+﻿@model HRPortal.Models.NewCategoryVM
+@{
+    ViewBag.Title = "AddCategory";
+}
+
+
+<div class="row">
+    <div class="col-xs-12">
+        <h2>New Category</h2>
+        @*@Html.ActionLink("Return to List", "Courses", "Admin")*@
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        @using (Html.BeginForm())
+        {
+            @Html.HiddenFor(c => c.Origin)
+            <div class="form-group">
+                <label>Category Name</label>
+                @Html.TextBoxFor(c => c.Category, new { @class = "form-control" })
+            </div>
+            <button type="submit" class="btn btn-sm btn-primary">Save</button>
+        }
+    </div>
+</div>
+

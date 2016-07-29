@@ -1,0 +1,39 @@
+﻿@model HRPortal.Models.PolicyCategoryVM
+@{
+    ViewBag.Title = "Add";
+}
+
+<h2>New Policy</h2>
+<div class="row">
+    @using (Html.BeginForm("Add", "Policy", FormMethod.Post))
+    {
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h4 class="panel-title">Policy Details</h4>
+            </div>
+            <div class="panel-body">
+                <div class="form-group">
+                    <label>Policy Title: </label>
+                    @Html.TextBoxFor(m => m.Policies[0].Name, new { @class = "form-control" })
+                </div>
+            </div>
+            <div class="panel-body">
+                <div class="form-group">
+                    <label>Category: </label>
+                    @Html.ActionLink("Add New Category", "AddCategory", "Policy", new { origin = "newPolicy" }, null)
+
+
+                    @Html.DropDownListFor(m => m.Policies[0].Category, Model.Categories, "-Choose One-", new { @class = "form-control" })
+                </div>
+            </div>
+            <div class="panel-body">
+                <div class="form-group">
+                    <label>Description: </label>
+                    @Html.TextAreaFor(m => m.Policies[0].Description, new { @class = "form-control" })
+                </div>
+                <button type="submit" class="btn btn-primary">Save</button>
+            </div>
+        </div>
+    }
+</div>
+

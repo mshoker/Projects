@@ -1,0 +1,25 @@
+﻿@model HRPortal.Models.SearchJobVM
+@{
+    ViewBag.Title = "SeeJobAvailability";
+}
+
+<h2>@Model.Job.Title Availability</h2>
+@Html.ActionLink("\nBack", "SeeJobs", "Applicants")
+<div class="row">
+    <table class="table table-striped">
+        @foreach (var company in Model.Companies)
+        {
+            foreach (var job in company.Openings)
+            {
+                if (job.JobId == Model.Job.JobId)
+                {
+                    <tr>
+                        <td>@company.Name</td>
+                        <td>@Html.ActionLink("Apply", "ApplyForJob", "Applicants", new {compId = company.CompanyId, jobId = Model.Job.JobId}, null)</td>
+                    </tr>
+                }
+            }
+        }
+    </table>
+</div>
+

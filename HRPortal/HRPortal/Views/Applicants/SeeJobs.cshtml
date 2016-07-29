@@ -1,0 +1,18 @@
+﻿@model IEnumerable<HRPortal.Models.Job>
+@{
+    ViewBag.Title = "SeeJobs";
+}
+
+<h2>Available Jobs</h2>
+@Html.ActionLink("\nBack", "Index", "Applicants")
+<div class="row">
+    <table class="table table-striped">
+        @foreach (var job in Model)
+        {
+            <tr>
+                <td>@job.Title</td>
+                <td>@Html.ActionLink("See Availabilities", "SeeJobAvailability", "Applicants", new {id=job.JobId}, null)</td>
+            </tr>
+        }
+    </table>
+</div>

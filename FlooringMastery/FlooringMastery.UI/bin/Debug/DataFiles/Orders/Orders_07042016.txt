@@ -1,0 +1,3 @@
+1|Mattea|560|WOOD|IN
+2|Gizmo|400|WOOD|OH
+3|Archer|4000000|CARPET|PA

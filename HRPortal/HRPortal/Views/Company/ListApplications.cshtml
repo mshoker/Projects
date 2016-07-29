@@ -1,0 +1,25 @@
+﻿@model HRPortal.Models.Company
+@{
+    ViewBag.Title = "ListApplications";
+}
+
+<h2>Applications for @Model.Name</h2>
+@Html.ActionLink("Return to Home", "Index", "Home")
+
+@for (int i = 0; i < Model.Applications.Count; i++)
+{
+    <div class="panel">
+        <div class="panel panel-heading">Application</div>
+        <div class="panel panel-body">
+            <p>First Name: @Model.Applications[i].FirstName</p>
+            <p>LastName: @Model.Applications[i].LastName</p>
+            <p><b>Phone: </b>@Model.Applications[i].Phone</p>
+            <p><b>Email: </b>@Model.Applications[i].Email</p>
+            <p><b>Best days to contact: </b>@Model.Applications[i].PreferredDays</p>
+            <p>Job Applying For: @Model.Applications[i].Job.Title</p>
+            <p>Resume: @Model.Applications[i].Resume</p>
+            <p>Status: @Model.Applications[i].Status | @Html.ActionLink("Change Status", "ChangeApplicationStatus", "Company", new { applicationIndex = i, companyId = Model.CompanyId }, null)</p>
+        </div>
+    </div>
+}
+

@@ -1,0 +1,22 @@
+Failed to read line
+Failed to read line
+Failed to read line
+6/30/2016 4:03:34 PMFailed to read line
+6/30/2016 4:08:31 PM Failed to read line
+6/30/2016 4:09:06 PM Failed to read line
+6/30/2016 6:06:43 PM Failed to read line
+6/30/2016 6:06:45 PM Failed to read line
+7/1/2016 9:48:25 AM Invalid date for order look up
+7/1/2016 10:09:01 AM Negative input attempt for area during create order, client: Bernie
+7/1/2016 10:33:59 AM Invalid date for order look up
+7/1/2016 10:35:05 AM Invalid date for order look up
+7/5/2016 8:13:27 AM Invalid date for order look up
+7/5/2016 8:39:30 AM Negative input attempt for area during create order, client: barker, bob
+7/5/2016 8:39:35 AM Negative input attempt for area during create order, client: barker, bob
+7/5/2016 9:48:03 AM Invalid date for order look up
+7/5/2016 9:49:17 AM Invalid date for order look up
+7/5/2016 9:49:29 AM Invalid date for order look up
+7/5/2016 9:51:06 AM Invalid date for order look up
+7/5/2016 9:51:24 AM Invalid date for order look up
+7/5/2016 9:51:33 AM Invalid date for order look up
+7/5/2016 9:51:46 AM Invalid date for order look up

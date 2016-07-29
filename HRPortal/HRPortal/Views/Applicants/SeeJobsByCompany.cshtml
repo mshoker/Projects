@@ -1,0 +1,28 @@
+﻿@model HRPortal.Models.Company
+@{
+    ViewBag.Title = "SeeJobsByCompany";
+}
+
+<h2>Available Jobs for @Model.Name</h2>
+<div class="row">
+    <table class="table table-striped">
+        <thead>
+        <th>Job Title</th>
+        <th></th>
+        </thead>
+        <tbody>
+            @foreach (var job in Model.Openings)
+            {
+                <tr>
+                    <td>@job.Title</td>
+                    <td>@Html.ActionLink("Apply", "ApplyForJob", "Applicants", new { compId = @Model.CompanyId, jobId = @job.JobId }, null)</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+@Html.ActionLink("Return to Home", "Index", "Home")
+
+
+
+
