@@ -1,0 +1,17 @@
+﻿@model CarDealership.UI.Models.CustomerVM
+@{
+    ViewBag.Title = "AddPhone";
+}
+
+<h2>Add Phone</h2>
+<div class="row">
+    @using (Html.BeginForm("AddPhone", "Customer", FormMethod.Post))
+    {
+        @Html.HiddenFor(m => m.CarId)
+        @Html.HiddenFor(m => m.Customer.CustomerID)
+        <label>New Phone: </label>
+        @Html.TextBoxFor(m => m.newPhone)
+        <button type="submit">Add Phone</button>
+    }
+</div>
+

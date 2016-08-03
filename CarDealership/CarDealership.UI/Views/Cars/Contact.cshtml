@@ -1,0 +1,79 @@
+﻿@using System.CodeDom
+@using CarDealership.Models.Enums
+@model CarDealership.Models.Request
+@{
+    ViewBag.Title = "Contact";
+}
+
+<h2>Contact Owner</h2>
+@Html.ActionLink("Back", "Find", "Cars")
+<div class="row">
+    <div class="col-xs-12 col-md-6">
+        <h3>@Model.Vehicle.AdTitle</h3>
+        <img src="@Url.Content(@Model.Vehicle.ImgUrl)" class="img-thumbnail" width="304" alt="@Model.Vehicle.Description"/>
+        <ul>
+            <li>@Model.Vehicle.Model.Make.Name</li>
+            <li>@Model.Vehicle.Model.Name</li>
+            <li>@Model.Vehicle.Year.Year</li>
+            <li>Condition: @Model.Vehicle.Condition</li>
+            <li>Price: $@Model.Vehicle.Price</li>
+        </ul>
+        <p>@Model.Vehicle.Description</p>
+    </div>
+    <div class="col-xs-12 col-md-6">
+        <div class="panel">
+            <div class="panel-heading">
+                Request More Information:
+            </div>
+            <div class="panel-body">
+                @using (Html.BeginForm())
+                {
+                    @Html.HiddenFor(m => m.Vehicle.VehicleID)
+                    <div class="form-group">
+                        <label>Your Account Id:</label>
+                        @Html.TextBoxFor(m => m.Customer.CustomerID)
+                        @Html.ActionLink("Create Account", "NewAccount", "Customer", new {carId = Model.Vehicle.VehicleID}, new {@class="btn btn-primary btn-sm"})
+                    </div>
+                    <div id="bestDays">
+                        <label>Best day to contact you:</label>
+                        @foreach (var day in Enum.GetValues(typeof(DaysOfTheWeek)))
+                        {
+                            if (day.ToString() != "None")
+                            {
+                                <span>@Html.CheckBox(day.ToString(), new {value = (int) day, @class = "days"})@day.ToString()</span>
+                                @Html.HiddenFor(m => m.PreferredDays)
+                            }
+                        }
+                    </div>
+                    <div id="bestTimes">
+                        <label>Best time to contact you:</label>
+                        @foreach (var time in Enum.GetValues(typeof(TimeOfDay)))
+                        {
+                            if (time.ToString() != "None")
+                            {
+                                <span>@Html.CheckBox(time.ToString(), new {value = (int) time, @class = "times"})@time.ToString()</span>
+                                @Html.HiddenFor(m => m.BestTimeToCall)
+                            }
+                        }
+                    </div>
+                    <div class="bestContactMethod">
+                        <label>Best time to contact you:</label>
+                        @foreach (var method in Enum.GetValues(typeof(ContactMethods)))
+                        {
+                            if (method.ToString() != "None")
+                            {
+                                <span>@Html.CheckBox(method.ToString(), new {value = (int) method, @class = "methods"})@method.ToString()</span>
+                                @Html.HiddenFor(m => m.BestContactMethod)
+                            }
+                        }
+                    </div>
+                    <button type="submit", class="btn  btn-primary">Submit</button>
+                    @Html.ActionLink("Back", "Find", "Cars")
+
+                }
+            </div>
+        </div>
+    </div>
+
+</div>
+

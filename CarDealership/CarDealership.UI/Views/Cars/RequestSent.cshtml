@@ -1,0 +1,22 @@
+﻿@model CarDealership.Models.Request
+@{
+    ViewBag.Title = "RequestSent";
+}
+
+<h2>Your Request is Submitted</h2>
+<div class="panel">
+    <h3>Name: </h3>
+    <p>@Model.Customer.Name</p>
+    <h3>Phone: </h3>
+    <p>@Model.Customer.PhoneNumbers.First().PhoneNumber</p>
+    <h3>Best days to contact: </h3>
+    <p>@Model.PreferredDays</p>
+    <h3>Best Time to Contact: </h3>
+    <p>@Model.BestTimeToCall</p>
+    <h3>Preferred Contact Method: </h3>
+    <p>@Model.BestContactMethod</p>
+    <h3>Car: </h3>
+    <p>@Model.Vehicle.Model.Make.Name @Model.Vehicle.Model.Name @Model.Vehicle.Year.Year</p>
+    @Html.ActionLink("Return to Main Screen", "Index", "Home", null, new {@class="btn btn-primary"})
+</div>
+

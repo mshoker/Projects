@@ -1,0 +1,12 @@
+﻿@model CarDealership.Models.Seller
+@{
+    ViewBag.Title = "NewSeller";
+}
+
+<h2>New Seller</h2>
+@using(Html.BeginForm("NewSeller", "Seller", FormMethod.Post)){
+    <label>Enter your name: </label>
+    @Html.TextBoxFor(m => m.Name)
+<button type="submit">Submit</button>
+}
+

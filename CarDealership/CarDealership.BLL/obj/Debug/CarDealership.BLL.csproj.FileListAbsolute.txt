@@ -1,0 +1,9 @@
+C:\Users\Apprentice\Documents\BitBucket\mattea-azara-individial-work\Week9\CarDealership\CarDealership.BLL\bin\Debug\CarDealership.BLL.dll
+C:\Users\Apprentice\Documents\BitBucket\mattea-azara-individial-work\Week9\CarDealership\CarDealership.BLL\bin\Debug\CarDealership.BLL.pdb
+C:\Users\Apprentice\Documents\BitBucket\mattea-azara-individial-work\Week9\CarDealership\CarDealership.BLL\obj\Debug\CarDealership.BLL.csprojResolveAssemblyReference.cache
+C:\Users\Apprentice\Documents\BitBucket\mattea-azara-individial-work\Week9\CarDealership\CarDealership.BLL\obj\Debug\CarDealership.BLL.dll
+C:\Users\Apprentice\Documents\BitBucket\mattea-azara-individial-work\Week9\CarDealership\CarDealership.BLL\obj\Debug\CarDealership.BLL.pdb
+C:\Users\Apprentice\Documents\BitBucket\mattea-azara-individial-work\Week9\CarDealership\CarDealership.BLL\bin\Debug\CarDealership.Data.dll
+C:\Users\Apprentice\Documents\BitBucket\mattea-azara-individial-work\Week9\CarDealership\CarDealership.BLL\bin\Debug\CarDealership.Models.dll
+C:\Users\Apprentice\Documents\BitBucket\mattea-azara-individial-work\Week9\CarDealership\CarDealership.BLL\bin\Debug\CarDealership.Data.pdb
+C:\Users\Apprentice\Documents\BitBucket\mattea-azara-individial-work\Week9\CarDealership\CarDealership.BLL\bin\Debug\CarDealership.Models.pdb

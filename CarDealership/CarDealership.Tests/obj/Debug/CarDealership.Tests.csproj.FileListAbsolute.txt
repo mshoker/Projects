@@ -1,0 +1,14 @@
+C:\Users\Apprentice\Documents\BitBucket\mattea-azara-individial-work\Week9\CarDealership\CarDealership.Tests\bin\Debug\CarDealership.Tests.dll
+C:\Users\Apprentice\Documents\BitBucket\mattea-azara-individial-work\Week9\CarDealership\CarDealership.Tests\bin\Debug\CarDealership.Tests.pdb
+C:\Users\Apprentice\Documents\BitBucket\mattea-azara-individial-work\Week9\CarDealership\CarDealership.Tests\bin\Debug\CarDealership.BLL.dll
+C:\Users\Apprentice\Documents\BitBucket\mattea-azara-individial-work\Week9\CarDealership\CarDealership.Tests\bin\Debug\CarDealership.Data.dll
+C:\Users\Apprentice\Documents\BitBucket\mattea-azara-individial-work\Week9\CarDealership\CarDealership.Tests\bin\Debug\nunit.framework.dll
+C:\Users\Apprentice\Documents\BitBucket\mattea-azara-individial-work\Week9\CarDealership\CarDealership.Tests\bin\Debug\CarDealership.Models.dll
+C:\Users\Apprentice\Documents\BitBucket\mattea-azara-individial-work\Week9\CarDealership\CarDealership.Tests\bin\Debug\CarDealership.BLL.pdb
+C:\Users\Apprentice\Documents\BitBucket\mattea-azara-individial-work\Week9\CarDealership\CarDealership.Tests\bin\Debug\CarDealership.Data.pdb
+C:\Users\Apprentice\Documents\BitBucket\mattea-azara-individial-work\Week9\CarDealership\CarDealership.Tests\bin\Debug\nunit.framework.xml
+C:\Users\Apprentice\Documents\BitBucket\mattea-azara-individial-work\Week9\CarDealership\CarDealership.Tests\bin\Debug\CarDealership.Models.pdb
+C:\Users\Apprentice\Documents\BitBucket\mattea-azara-individial-work\Week9\CarDealership\CarDealership.Tests\obj\Debug\CarDealership.Tests.csprojResolveAssemblyReference.cache
+C:\Users\Apprentice\Documents\BitBucket\mattea-azara-individial-work\Week9\CarDealership\CarDealership.Tests\obj\Debug\CarDealership.Tests.dll
+C:\Users\Apprentice\Documents\BitBucket\mattea-azara-individial-work\Week9\CarDealership\CarDealership.Tests\obj\Debug\CarDealership.Tests.pdb
+C:\Users\Apprentice\Documents\BitBucket\mattea-azara-individial-work\Week9\CarDealership\CarDealership.Tests\bin\Debug\CarDealership.Tests.dll.config

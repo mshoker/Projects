@@ -1,0 +1,7 @@
+C:\Users\Apprentice\Documents\BitBucket\mattea-azara-individial-work\Week9\CarDealership\CarDealership.Models\bin\Debug\CarDealership.Models.dll
+C:\Users\Apprentice\Documents\BitBucket\mattea-azara-individial-work\Week9\CarDealership\CarDealership.Models\bin\Debug\CarDealership.Models.pdb
+C:\Users\Apprentice\Documents\BitBucket\mattea-azara-individial-work\Week9\CarDealership\CarDealership.Models\obj\Debug\CarDealership.Models.csprojResolveAssemblyReference.cache
+C:\Users\Apprentice\Documents\BitBucket\mattea-azara-individial-work\Week9\CarDealership\CarDealership.Models\obj\Debug\CarDealership.Models.dll
+C:\Users\Apprentice\Documents\BitBucket\mattea-azara-individial-work\Week9\CarDealership\CarDealership.Models\obj\Debug\CarDealership.Models.pdb
+C:\Users\Apprentice\Documents\BitBucket\mattea-azara-individial-work\Week9\CarDealership\CarDealership.Models\bin\Debug\Dapper.dll
+C:\Users\Apprentice\Documents\BitBucket\mattea-azara-individial-work\Week9\CarDealership\CarDealership.Models\bin\Debug\Dapper.xml

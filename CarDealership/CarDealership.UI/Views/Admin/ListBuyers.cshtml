@@ -1,0 +1,36 @@
+﻿@model List<CarDealership.Models.Customer>
+@{
+    ViewBag.Title = "ListBuyers";
+}
+
+<h2>All Buyers</h2>
+
+@foreach (var clt in Model)
+{
+    <div class="row">
+        <div class="col-lg-6">
+            <h3>@clt.Name</h3>
+            <h5>@clt.CustomerID</h5>
+            <h4>Email(s)</h4>
+            <table>
+                @foreach (var email in clt.Emails)
+                {
+                    <tr>
+                        <td>@email.EmailAddress</td>
+                    </tr>
+                }
+            </table>
+            <h4>Phone Number(s)</h4>
+            <table>
+                @foreach (var phone in clt.PhoneNumbers)
+                {
+                    <tr>
+                        <td>@phone.Name</td>
+                        <td>@phone.PhoneNumber</td>
+                    </tr>
+                }
+            </table>
+        </div>
+    </div>
+}
+

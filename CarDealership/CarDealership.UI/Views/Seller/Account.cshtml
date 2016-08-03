@@ -1,0 +1,117 @@
+﻿@model CarDealership.Models.Seller
+@{
+    ViewBag.Title = "Account";
+}
+
+<h2>Account</h2>
+<div class="row">
+    <p><strong>Id: </strong>@Model.SellerID</p>
+</div>
+<div class="row">
+    <p><strong>Name: </strong>@Model.Name</p>
+</div>
+<div class="row">
+    @Html.ActionLink("Add New Vehicle", "NewVehicle", "Seller", new { id = @Model.SellerID }, new { @class = "btn btn-info" })
+</div>
+<div class="row">
+    <h4>Vehicles:</h4>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>
+                    Vehicle ID
+                </th>
+                <th>
+                    Make
+                </th>
+                <th>
+                    Model
+                </th>
+                <th>
+                    Year
+                </th>
+                <th>
+                    Price
+                </th>
+                <th>
+                    Ad Title
+                </th>
+                <th>
+                    Description
+                </th>
+                <th>
+                    Image Link
+                </th>
+                <th>
+                    Availability
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var car in @Model.Vehicles)
+            {
+                <tr>
+                    <td>@car.VehicleID</td>
+                </tr>
+                <tr>
+                    <td>@car.Model.Make.Name</td>
+                </tr>
+                <tr>
+                    <td>@car.Model.Name</td>
+                </tr>
+                <tr>
+                    <td>@car.Year.Year</td>
+                </tr>
+                <tr>
+                    <td>$@car.Price</td>
+                </tr>
+                <tr>
+                    <td>@car.AdTitle</td>
+                </tr>
+                <tr>
+                    <td>@car.Description</td>
+                </tr>
+                <tr>
+                    <td>@car.ImgUrl</td>
+                </tr>
+                <tr>
+                    <td>@car.IsAvailable.ToString()</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<div class="row">
+    <h4>Requests:</h4>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Requested Vehicle ID</th>
+                <th>Customer Name</th>
+                <th>Phone</th>
+                <th>Email</th>
+                <th>Request</th>
+                <th>Preferred Contact Day</th>
+                <th>Preferred Contact Method</th>
+                <th>Request Status</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var request in @Model.Requests)
+            {
+                <tr>
+                    <td>@request.Vehicle.VehicleID</td>
+                    <td>@request.Customer.Name</td>
+                    <td>@request.Customer.PhoneNumbers.First()</td>
+                    <td>@request.Customer.Emails.First()</td>
+                    <td>@request.AdditionalNotes</td>
+                    <td>@request.PreferredDays</td>
+                    <td>@request.BestContactMethod</td>
+                    <td>@request.Status</td>
+                    <td>@Html.ActionLink("Update", "UpdateStatus", "Seller", new { id = @request.RequestID }, null)</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

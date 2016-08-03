@@ -1,0 +1,54 @@
+﻿@model List<CarDealership.Models.Vehicle>
+@{
+    ViewBag.Title = "Find";
+}
+
+<h2>All Vehicles</h2>
+
+<!--add classes for make and model and year so can filter data, think yelp filter via check boxes-->
+<div class="row">
+    <caption>Filter options:</caption>
+    <div class="col-xs-6 col-md-3">
+        <h4>By Make:</h4>
+        
+    </div>
+    <div class="col-xs-6 col-md-3">
+
+    </div>
+    <div class="col-xs-6 col-md-3">
+
+    </div>
+    <div class="col-xs-6 col-md-3">
+
+    </div>
+        <tr>
+            <th>By Make:</th>
+            <th>By Model:</th>
+            <th>By Year:</th>
+            <th>By Price: </th>
+        </tr>
+       
+</div>
+
+
+@foreach (var car in Model)
+{
+    <div class="row" class="@car.Model.Make.Name @car.Model.Name @car.Year.Year @car.Price.ToString() panel">
+        
+        <div class="panel-heading">
+            <h3>@car.AdTitle</h3>
+        </div>
+        <div class="panel-body">
+            <img src="@Url.Content(@car.ImgUrl)" class="img-thumbnail" width="304" alt="@car.Description" />
+            <ul>
+                <li>@car.Model.Make.Name</li>
+                <li>@car.Model.Name</li>
+                <li>@car.Year.Year</li>
+                <li>Condition: @car.Condition</li>
+                <li>Price: $@car.Price</li>
+            </ul>
+            <p>@car.Description</p>
+            @Html.ActionLink("Contact Owner", "Contact", "Cars", new { vehicleId = @car.VehicleID }, new { @class = "btn btn-info" })
+        </div>
+    </div>
+}

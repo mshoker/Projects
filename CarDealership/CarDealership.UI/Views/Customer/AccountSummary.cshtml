@@ -1,0 +1,44 @@
+﻿@model CarDealership.UI.Models.CustomerVM
+@{
+    ViewBag.Title = "AccountSummary";
+}
+
+<h2>Account Summary</h2>
+<div class="row">
+    <label>Your Account Number: </label>
+    @Html.DisplayFor(m => m.Customer.CustomerID)
+</div>
+<div class="row">
+    <label>Name: </label>
+    @Html.DisplayFor(m => m.Customer.Name)
+</div>
+<div class="row">
+    <label>Phone Number(s): </label>
+    <ol>
+        @foreach (var num in Model.Customer.PhoneNumbers)
+        {
+            <li>@num.PhoneNumber</li>
+        }
+    </ol>
+    @Html.ActionLink("Add Phone", "AddPhone", "Customer", new {customerId = Model.Customer.CustomerID, carId = Model.CarId}, null)
+</div>
+<div class="row">
+    <label>Email(s)</label>
+    <ol>
+        @foreach (var email in Model.Customer.Emails)
+        {
+            <li>@email.EmailAddress</li>
+        }
+    </ol>
+
+    @Html.ActionLink("Add Email", "AddEmail", "Customer", new { customerId = Model.Customer.CustomerID, carId = Model.CarId }, null)
+</div>
+
+@if (Model.CarId != 0)
+{
+    @Html.ActionLink("Continue with request", "Contact", "Cars", new { vehicleId = Model.CarId}, new {@class = "btn btn-primary"})
+}
+else
+{
+    @Html.ActionLink("View our inventory", "Find", "Cars", null, new {@class="btn btn-primary"})
+}
