@@ -160,6 +160,7 @@
     </Compile>
     <Compile Include="Models\CustomerVM.cs" />
     <Compile Include="Models\NewCustomerVM.cs" />
+    <Compile Include="Models\VehicleVM.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -186,6 +187,8 @@
     <Content Include="Views\Seller\NewSeller.cshtml" />
     <Content Include="Views\Seller\Existing.cshtml" />
     <Content Include="Views\Seller\Account.cshtml" />
+    <Content Include="Views\Seller\Index.cshtml" />
+    <Content Include="Views\Seller\NewVehicle.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

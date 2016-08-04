@@ -11,7 +11,7 @@
     <p><strong>Name: </strong>@Model.Name</p>
 </div>
 <div class="row">
-    @Html.ActionLink("Add New Vehicle", "NewVehicle", "Seller", new { id = @Model.SellerID }, new { @class = "btn btn-info" })
+    @Html.ActionLink("Add New Vehicle", "NewVehicle", "Seller", new { sellerId = @Model.SellerID }, new { @class = "btn btn-info" })
 </div>
 <div class="row">
     <h4>Vehicles:</h4>
@@ -52,29 +52,21 @@
             {
                 <tr>
                     <td>@car.VehicleID</td>
-                </tr>
-                <tr>
+                
                     <td>@car.Model.Make.Name</td>
-                </tr>
-                <tr>
+                
                     <td>@car.Model.Name</td>
-                </tr>
-                <tr>
+                
                     <td>@car.Year.Year</td>
-                </tr>
-                <tr>
+                
                     <td>$@car.Price</td>
-                </tr>
-                <tr>
+                
                     <td>@car.AdTitle</td>
-                </tr>
-                <tr>
+                
                     <td>@car.Description</td>
-                </tr>
-                <tr>
+                
                     <td>@car.ImgUrl</td>
-                </tr>
-                <tr>
+                
                     <td>@car.IsAvailable.ToString()</td>
                 </tr>
             }

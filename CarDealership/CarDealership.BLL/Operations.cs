@@ -72,5 +72,20 @@ namespace CarDealership.BLL
         {
             return _sRepo.GetBy(id);
         }
+
+        public List<Make> GetAllMakes()
+        {
+            return _vRepo.GetAllMakes();
+        }
+
+        public List<Model> GetAllModels()
+        {
+            return _vRepo.GetAllModels();
+        }
+
+        public void AddVehicle(Vehicle vehicle)
+        {
+            _vRepo.AddVehicle(vehicle);
+        }
     }
 }

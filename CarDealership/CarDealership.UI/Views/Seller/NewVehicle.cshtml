@@ -1,0 +1,55 @@
+﻿@using CarDealership.Models.Enums
+@model CarDealership.UI.Models.VehicleVM
+@{
+    ViewBag.Title = "NewVehicle";
+}
+
+<div class="row">
+    <div class="col-xs-8">
+        <div class="panel">
+            <div class="panel-heading">
+                <h2>New Vehicle</h2>
+            </div>
+            <div class="panel-body">
+                @using (Html.BeginForm("NewVehicle", "Seller", FormMethod.Post))
+                {
+                    @Html.HiddenFor(v => v.Vehicle.SellerID)
+                    <div class="row">
+                        <label>Select Make: </label>
+                        @Html.DropDownListFor(m => m.Vehicle.Model.Make.MakeID, Model.Makes, "-Select Make-", new { id = "SelectedMake", @class = "form-control" })
+                    </div>
+                    <div class="row">
+                        <label>Select Model: </label>
+                        @Html.DropDownListFor(m => m.Vehicle.Model.ModelID, Model.Models, "-Select Model-", new { id = "SelectedModel", @class = "form-control" })
+                    </div>
+                    <div class="row">
+                        <label>Year: </label>
+                        @Html.TextBoxFor(v => v.Vehicle.Year)
+                    </div>
+                    <div class="row">
+                        <label>Car Condition: </label>
+                        @Html.DropDownListFor(c => c.Vehicle.Condition, Model.Condition, "-Select Condition-", new { id = "SelectedCondition", @class = "form-control" })
+                    </div>
+                    <div class="row">
+                        <label>Price: </label>
+                        @Html.TextBoxFor(v => v.Vehicle.Price)
+                    </div>
+                    <div class="row">
+                        <label>Ad Title: </label>
+                        @Html.TextBoxFor(v => v.Vehicle.AdTitle)
+                    </div>
+                    <div class="row">
+                        <label>Description: </label>
+                        @Html.TextAreaFor(v => v.Vehicle.Description)
+                    </div>
+                    <div class="row">
+                        <label>Image Url: </label>
+                        @Html.TextBoxFor(v => v.Vehicle.ImgUrl)
+                    </div>
+
+                    <button type="submit" class="btn btn-primary"></button>
+                }
+            </div>
+        </div>
+    </div>
+</div>

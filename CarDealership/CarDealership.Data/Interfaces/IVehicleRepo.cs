@@ -11,6 +11,10 @@ namespace CarDealership.Data.Interfaces
     {
         //get all vehicles
         List<Vehicle> GetAll();
+        //get all makes
+        List<Make> GetAllMakes();
+        //get all models
+        List<Model> GetAllModels();
         //get vehicle by id
         Vehicle GetById(int id);
         //get vehicles by model

@@ -33,12 +33,55 @@ namespace CarDealership.Data.VehicleRepository
                         }
                     }
                 }
-
-                //vehicles = cn.Query<Vehicle>(@"SELECT *
-                //                        FROM Vehicle").ToList();
             }
 
             return vehicles;
+        }
+
+        public List<Model> GetAllModels()
+        {
+            List<Model> models = new List<Model>();
+            using (var cn = new SqlConnection(ConfigurationManager.ConnectionStrings["CarDealership"].ConnectionString))
+            {
+                using (var cmd = cn.CreateCommand())
+                {
+                    cmd.CommandText = "SELECT * FROM Model";
+                    cn.Open();
+
+                    using (var dr = cmd.ExecuteReader())
+                    {
+                        while (dr.Read())
+                        {
+                            models.Add(PopulateModelFromReader(dr));
+                        }
+                    }
+                }
+            }
+
+            return models;
+        }
+
+        public List<Make> GetAllMakes()
+        {
+            List<Make> makes = new List<Make>();
+            using (var cn = new SqlConnection(ConfigurationManager.ConnectionStrings["CarDealership"].ConnectionString))
+            {
+                using (var cmd = cn.CreateCommand())
+                {
+                    cmd.CommandText = "SELECT * FROM Makes";
+                    cn.Open();
+
+                    using (var dr = cmd.ExecuteReader())
+                    {
+                        while (dr.Read())
+                        {
+                            makes.Add(PopulateMakeFromReader(dr));
+                        }
+                    }
+                }
+            }
+
+            return makes;
         }
 
         private Vehicle PopulateVehicleFromReader(SqlDataReader dr)
@@ -49,12 +92,38 @@ namespace CarDealership.Data.VehicleRepository
             vehicle.SellerID = (int)dr["SellerID"];
             vehicle.Year = DateTime.Parse(dr["Year"].ToString());
             vehicle.AdTitle = dr["AdTitle"].ToString();
+            vehicle.Description = dr["Description"].ToString();
             vehicle.Price = (decimal) dr["Price"];
             vehicle.ImgUrl = dr["ImgUrl"].ToString();
             vehicle.Condition = (CarCondition) (int) dr["Condition"];
             vehicle.Model = GetModel(int.Parse(dr["ModelId"].ToString()));
 
             return vehicle;
+        }
+
+        private Model PopulateModelFromReader(SqlDataReader dr)
+        {
+            Model model = new Model()
+            {
+                ModelID = int.Parse(dr["ModelId"].ToString()),
+                Make = GetMake(int.Parse(dr["MakeId"].ToString())),
+                Description = dr["Description"].ToString(),
+                Name = dr["Name"].ToString()
+            };
+
+            return model;
+        }
+
+        private Make PopulateMakeFromReader(SqlDataReader dr)
+        {
+            Make make = new Make()
+            {
+                MakeID = int.Parse(dr["MakeID"].ToString()),
+                Name = dr["Brand"].ToString()
+            };
+
+
+            return make;
         }
 
         private Model GetModel(int ModelID)
@@ -73,10 +142,7 @@ namespace CarDealership.Data.VehicleRepository
                         {
                             while (dr.Read())
                             {
-                                model.ModelID = ModelID;
-                                model.Make = GetMake(int.Parse(dr["MakeId"].ToString()));
-                                model.Description = dr["Description"].ToString();
-                                model.Name = dr["Name"].ToString();
+                                model = PopulateModelFromReader(dr);
                             }
                         }
 
@@ -104,8 +170,7 @@ namespace CarDealership.Data.VehicleRepository
                         {
                             while (dr.Read())
                             {
-                                make.MakeID = MakeID;
-                                make.Name = dr["Brand"].ToString();
+                                make = PopulateMakeFromReader(dr);
                             }
                         }
                     }
@@ -225,13 +290,22 @@ namespace CarDealership.Data.VehicleRepository
         {
             using (var cn = new SqlConnection(ConfigurationManager.ConnectionStrings["CarDealership"].ConnectionString))
             {
-                using (var cmd = cn.CreateCommand())
-                {
-                    cmd.CommandText =
-                        $"INSERT INTO Vehicle (SellerID, [Year], AdTitle, [Description], Price, ImgUrl, Condition, ModelID) " +
-                        $"VALUES({vehicle.SellerID}, {int.Parse(vehicle.Year.Year.ToString())}, {vehicle.AdTitle}, {vehicle.Description}, {vehicle.Price}, {vehicle.ImgUrl}, {vehicle.Condition}, {vehicle.Model.ModelID})";
-                    cn.Open();
-                }
+                SqlCommand cmd = cn.CreateCommand();
+                cmd.CommandText =
+                    $"INSERT INTO Vehicle (SellerID, [Year], AdTitle, [Description], Price, ImgUrl, Condition, ModelID) " +
+                    $"VALUES(@SellerID, @Year, @AdTitle , @Description, @Price, @ImgUrl, @Condition, @ModelID)";
+                cmd.Parameters.AddWithValue("@SellerID", vehicle.SellerID);
+                cmd.Parameters.AddWithValue("@Year", vehicle.Year);
+                cmd.Parameters.AddWithValue("@AdTitle", vehicle.AdTitle);
+                cmd.Parameters.AddWithValue("@Description", vehicle.Description);
+                cmd.Parameters.AddWithValue("@Price", vehicle.Price);
+                cmd.Parameters.AddWithValue("@ImgUrl", vehicle.ImgUrl);
+                cmd.Parameters.AddWithValue("@Condition", (int)vehicle.Condition);
+                cmd.Parameters.AddWithValue("@ModelID", vehicle.Model.ModelID);
+
+                cmd.Connection = cn;
+                cn.Open();
+                cmd.ExecuteNonQuery();
             }
         }
 

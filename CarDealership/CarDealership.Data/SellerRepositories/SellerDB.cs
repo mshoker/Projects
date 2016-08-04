@@ -80,7 +80,7 @@ namespace CarDealership.Data.SellerRepositories
                 SqlCommand cmd = new SqlCommand();
                 cmd.CommandText = "SELECT * FROM Seller WHERE SellerID = @SellerID";
                 cmd.Parameters.AddWithValue("@SellerID", id);
-
+                cmd.Connection = cn;
                 cn.Open();
 
                 using (var dr = cmd.ExecuteReader())

@@ -125,6 +125,16 @@ namespace CarDealership.Data.VehicleRepository
             return _vehicles;
         }
 
+        public List<Make> GetAllMakes()
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Model> GetAllModels()
+        {
+            throw new NotImplementedException();
+        }
+
         public Vehicle GetById(int id)
         {
             return _vehicles.FirstOrDefault(v => v.VehicleID == id);

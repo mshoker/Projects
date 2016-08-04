@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Sell your car on CarsForSale.com!</h2>
+<div class="row">
+    @using (Html.BeginForm("Index", "Seller", FormMethod.Post))
+    {
+        <label>Enter your account number to log in: </label>
+        <input type="text" id="accountId" name="accountId"/>
+        <button type="submit" class="btn btn-info">Log in</button>
+   }
+</div>
+<div class="row">
+    @Html.ActionLink("Create New Account", "NewSeller", "Seller",  null, new {@class="btn btn-info"})
+</div>
+
+
+
+
+
+
